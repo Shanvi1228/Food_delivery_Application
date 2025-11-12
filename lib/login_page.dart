@@ -14,7 +14,7 @@ class login extends StatefulWidget {
 class _LoginState extends State<login> {
   @override
   Widget build(BuildContext context) {
-    // We use Builder to get context for the Scaffold and determine screen size
+
     return Builder(
         builder: (context) {
           final screenHeight = MediaQuery.of(context).size.height;
@@ -23,9 +23,9 @@ class _LoginState extends State<login> {
             body: SingleChildScrollView(
               child: Stack(
                 children: [
-                  // 2. Colored Header Background
+
                   Container(
-                    height: screenHeight * 0.3, // Header takes 30% of screen height
+                    height: screenHeight * 0.3,
                     width: double.infinity,
                     color: kPrimaryColor,
                     alignment: Alignment.topCenter,
@@ -35,22 +35,21 @@ class _LoginState extends State<login> {
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
-                          color: Colors.black87, // Header text color
+                          color: Colors.black87,
                         )
                     ),
                   ),
 
-                  // 3. White Login Form Card (positioned over the header)
                   Container(
                     width: double.infinity,
-                    margin: EdgeInsets.only(top: screenHeight * 0.25), // Starts slightly over header
+                    margin: EdgeInsets.only(top: screenHeight * 0.25),
                     padding: const EdgeInsets.symmetric(
                       horizontal: kHorizontalPadding,
                       vertical: 30.0,
                     ),
                     decoration: const BoxDecoration(
                       color: Colors.white,
-                      // Rounded top corners to match the design
+
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(30.0),
                         topRight: Radius.circular(30.0),
@@ -59,7 +58,7 @@ class _LoginState extends State<login> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // Welcome Text Block
+
                         const Text(
                           "Welcome",
                           style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
@@ -128,7 +127,7 @@ class _LoginState extends State<login> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  // Placeholder for social icons (Google, Facebook, etc.)
+
                                   IconButton(onPressed: (){}, icon: const Icon(Icons.facebook, size: 30, color: Colors.blue)),
                                   IconButton(onPressed: (){}, icon: Image.asset('assets/google.png', height: 30)), // Use actual asset
                                 ],
@@ -174,11 +173,11 @@ class _StyledTextField extends StatelessWidget {
       obscureText: isPassword,
       decoration: InputDecoration(
         hintText: labelText,
-        // The background color of the text field
-        fillColor: const Color(0xFFFFF0D0), // A very light cream/yellow
+
+        fillColor: const Color(0xFFFFF0D0),
         filled: true,
         contentPadding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 15.0),
-        // Removes the border completely
+
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15.0),
           borderSide: BorderSide.none,
@@ -191,7 +190,7 @@ class _StyledTextField extends StatelessWidget {
           borderRadius: BorderRadius.circular(15.0),
           borderSide: const BorderSide(color: kPrimaryColor, width: 2.0),
         ),
-        // Places the Forgot Password link
+
         suffixIcon: suffixWidget != null
             ? Padding(
           padding: const EdgeInsets.only(right: 8.0),
