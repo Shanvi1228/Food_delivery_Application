@@ -2,8 +2,9 @@
 
 https://github.com/user-attachments/assets/ee78ec0d-fe2a-405d-9121-26e995b9fb92
 
-(https://github.com/user-attachments/assets/569f89aa-4600-4f96-b099-2d93603483d2)
-(https://github.com/user-attachments/assets/8f073a55-5622-4640-9b82-617ac8d6263f)
+![WhatsApp Image 2025-11-13 at 2 28 00 PM](https://github.com/user-attachments/assets/a57fe66c-8f32-461d-bed9-7602f266f97a)
+![WhatsApp Image 2025-11-13 at 2 27 59 PM](https://github.com/user-attachments/assets/edbcaa88-f63e-4dfc-8d34-7603ddf6c497)
+
 # food_delivery_application
 #SIMMER- Food Delivery application UI<img width="1920" height="1008" alt="Screenshot 2025-11-12 222836" src="https://github.com/user-attachments/assets/a0458b56-ec6c-4887-8844-41ff302ee900" />
 <img width="1920" height="1008" alt="Screenshot 2025-11-12 222818" src="https://github.com/user-attachments/assets/6c682121-ba1c-4f80-8e15-fe0959e70a40" />
