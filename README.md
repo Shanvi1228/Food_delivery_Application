@@ -1,6 +1,16 @@
-# food_delivery_application
 
-A new Flutter project.
+
+https://github.com/user-attachments/assets/ee78ec0d-fe2a-405d-9121-26e995b9fb92
+
+![WhatsApp Image 2025-11-13 at 2 28 00 PM](https://github.com/user-attachments/assets/a57fe66c-8f32-461d-bed9-7602f266f97a)
+![WhatsApp Image 2025-11-13 at 2 27 59 PM](https://github.com/user-attachments/assets/edbcaa88-f63e-4dfc-8d34-7603ddf6c497)
+
+# food_delivery_application
+#SIMMER- Food Delivery application UI<img width="1920" height="1008" alt="Screenshot 2025-11-12 222836" src="https://github.com/user-attachments/assets/a0458b56-ec6c-4887-8844-41ff302ee900" />
+<img width="1920" height="1008" alt="Screenshot 2025-11-12 222818" src="https://github.com/user-attachments/assets/6c682121-ba1c-4f80-8e15-fe0959e70a40" />
+<img width="1902" height="997" alt="Screenshot 2025-11-12 222750" src="https://github.com/user-attachments/assets/b67a9c56-47e3-4c3b-9120-d28e99f7cdec" />
+<img width="1897" height="963" alt="Screenshot 2025-11-12 222641" src="https://github.com/user-attachments/assets/1bd61f69-1d7c-44b4-b93d-2c067b8f7d5b" />
+
 
 ## Getting Started
 
