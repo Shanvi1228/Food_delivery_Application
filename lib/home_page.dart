@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
+import 'settings.dart';
+import 'my_order.dart';
+import 'help_faqs.dart';
+import 'contact.dart';
 
 const Color kHeaderColor = Color(0xFFFFCC33);
 
@@ -161,19 +164,37 @@ class _CategoryChipsRow extends StatelessWidget {
       // Reduces the top padding to move it up (closer to the search bar)
       // and adds horizontal padding to align with the rest of the content.
       padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-      child: Row(
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
 
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
 
-          _CategoryChip(imagePath: 'assets/snacks.jfif', label: 'Snacks'),
-          _CategoryChip(imagePath: 'assets/meal.jfif', label: 'Meal'),
-          _CategoryChip(imagePath: 'assets/vegan.jpg', label: 'Vegan'),
-          _CategoryChip(imagePath: 'assets/dessert.jfif', label: 'Dessert'),
-          _CategoryChip(imagePath: 'assets/drinks.jfif', label: 'Drinks'),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: _CategoryChip(imagePath: 'assets/snacks.jfif', label: 'Snacks'),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: _CategoryChip(imagePath: 'assets/meal.jfif', label: 'Meal'),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: _CategoryChip(imagePath: 'assets/vegan.jpg', label: 'Vegan'),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: _CategoryChip(imagePath: 'assets/dessert.jfif', label: 'Dessert'),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: _CategoryChip(imagePath: 'assets/drinks.jfif', label: 'Drinks'),
+            ),
 
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -284,7 +305,7 @@ class _DiscountBanner extends StatelessWidget {
         color: Colors.orange[300],
         borderRadius: BorderRadius.circular(20.0),
         image: const DecorationImage(
-          image: AssetImage("assets/hehe.avif"),
+          image: AssetImage("assets/hehe2.jpg"),
           fit: BoxFit.cover,
           alignment: Alignment.centerRight,
           opacity: 0.6
@@ -293,16 +314,6 @@ class _DiscountBanner extends StatelessWidget {
       child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'Experience our',
-            style: TextStyle(
-                fontSize: 16, color: Colors.white70, fontWeight: FontWeight.w400),
-          ),
-          Text(
-            '50% OFF',
-            style: TextStyle(
-                fontSize: 34, color: Colors.white, fontWeight: FontWeight.bold),
-          ),
           SizedBox(height: 10),
           // ElevatedButton(
           //   onPressed: () {},
@@ -338,7 +349,7 @@ class RecommendedSection extends StatelessWidget {
           const SizedBox(height: 15),
           // Horizontal list of recommended items
           SizedBox(
-            height: 180,
+            height: 150,
             child: ListView(
               scrollDirection: Axis.horizontal,
 
@@ -367,11 +378,12 @@ class RecommendedSection extends StatelessWidget {
                   imagepath: 'assets/momo.jfif',
                   foodName: 'WOW! MOMO',
                 ),
-                SizedBox(width: 15,),
+               /* SizedBox(width: 15,),
                 FoodCard(
                   imagepath: 'assets/IDLI.avif',
                   foodName: 'Idli & More',
                 ),
+                */
               ],
             ),
           ),
@@ -395,7 +407,7 @@ class FoodCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 300,
+      width: 250,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
@@ -509,25 +521,41 @@ class _FoodAppHomeState extends State<FoodAppHome> {
                ListTile(
                  title: Text("My Orders"),
                  leading: Icon(Icons.check_box_outlined),
-                 trailing: Icon(Icons.arrow_right_outlined),
+                 trailing: IconButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => my_order_page()));
+                 },
+                   icon: Icon(Icons.arrow_right_outlined),
+                 ),
                ),
                Divider(),
                ListTile(
                  title: Text("Help & FAQs"),
                  leading: Icon(Icons.chat_bubble),
-                 trailing: Icon(Icons.arrow_right_outlined),
+                 trailing: IconButton(onPressed: (){
+                   Navigator.push(context, MaterialPageRoute(builder: (context) => help_faqs()));
+                 },
+                   icon: Icon(Icons.arrow_right_outlined),
+                 ),
                ),
                Divider(),
                ListTile(
                  title: Text("Contact Us"),
                  leading: Icon(Icons.wifi_calling_3_rounded),
-                 trailing: Icon(Icons.arrow_right_outlined),
+                 trailing: IconButton(onPressed: (){
+                   Navigator.push(context, MaterialPageRoute(builder: (context) => contact_us()));
+                 },
+                   icon: Icon(Icons.arrow_right_outlined),
+                 ),
                ),
                Divider(),
                ListTile(
                  title: Text("Settings"),
                  leading: Icon(Icons.settings),
-                 trailing: Icon(Icons.arrow_right_outlined),
+                 trailing: IconButton(onPressed: (){
+                   Navigator.push(context, MaterialPageRoute(builder: (context) => settings()));
+                 },
+                   icon: Icon(Icons.arrow_right_outlined),
+                 ) ,
                ),
              ],
            )),
@@ -602,12 +630,12 @@ class _FoodAppHomeState extends State<FoodAppHome> {
             sliver: SliverGrid.builder(
 
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 4,
+                crossAxisCount: 2,
                 mainAxisSpacing: 15.0, // Vertical spacing
                 crossAxisSpacing: 15.0, // Horizontal spacing
                 childAspectRatio: 0.8, // Makes cards taller than they are wide
               ),
-              itemCount: 4, // Example: 8 items
+              itemCount: 4,
 
               // Builds each card in the grid
               itemBuilder: (context, index) {
@@ -652,7 +680,7 @@ class _FoodAppHomeState extends State<FoodAppHome> {
            ),],
 
          currentIndex: _selectedIndex, // Highlight the current tab
-         selectedItemColor: Colors.deepOrange, // primary color
+         selectedItemColor: Colors.deepOrange,
          unselectedItemColor: Colors.black87,
          showUnselectedLabels: true, // Shows label for all items
          onTap: _onItemTapped, // Call the method when a tab is tapped

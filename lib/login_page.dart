@@ -30,7 +30,7 @@ class _LoginState extends State<login> {
                     color: kPrimaryColor,
                     alignment: Alignment.topCenter,
                     padding: const EdgeInsets.only(top: 60),
-                    child: const Text(
+                     child: const Text(
                         "Log In",
                         style: TextStyle(
                           fontSize: 24,
@@ -190,7 +190,6 @@ class _StyledTextField extends StatelessWidget {
           borderRadius: BorderRadius.circular(15.0),
           borderSide: const BorderSide(color: kPrimaryColor, width: 2.0),
         ),
-
         suffixIcon: suffixWidget != null
             ? Padding(
           padding: const EdgeInsets.only(right: 8.0),
