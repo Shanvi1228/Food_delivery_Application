@@ -168,7 +168,7 @@ class _CategoryChipsRow extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         child: Row(
 
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
 
@@ -470,7 +470,6 @@ class FoodAppHome extends StatefulWidget {
 class _FoodAppHomeState extends State<FoodAppHome> {
   int _selectedIndex = 0;
 
-  // 2. Method to update the index when a tab is tapped
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -522,7 +521,7 @@ class _FoodAppHomeState extends State<FoodAppHome> {
                  title: Text("My Orders"),
                  leading: Icon(Icons.check_box_outlined),
                  trailing: IconButton(onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => my_order_page()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => MyOrdersScreen()));
                  },
                    icon: Icon(Icons.arrow_right_outlined),
                  ),
@@ -630,7 +629,7 @@ class _FoodAppHomeState extends State<FoodAppHome> {
             sliver: SliverGrid.builder(
 
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
+                crossAxisCount: 4,
                 mainAxisSpacing: 15.0, // Vertical spacing
                 crossAxisSpacing: 15.0, // Horizontal spacing
                 childAspectRatio: 0.8, // Makes cards taller than they are wide
