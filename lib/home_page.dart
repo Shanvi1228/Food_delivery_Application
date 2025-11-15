@@ -541,7 +541,7 @@ class _FoodAppHomeState extends State<FoodAppHome> {
                  title: Text("Contact Us"),
                  leading: Icon(Icons.wifi_calling_3_rounded),
                  trailing: IconButton(onPressed: (){
-                   Navigator.push(context, MaterialPageRoute(builder: (context) => contact_us()));
+                   Navigator.push(context, MaterialPageRoute(builder: (context) => ContactUsScreen()));
                  },
                    icon: Icon(Icons.arrow_right_outlined),
                  ),
@@ -678,11 +678,11 @@ class _FoodAppHomeState extends State<FoodAppHome> {
              label: 'Account',
            ),],
 
-         currentIndex: _selectedIndex, // Highlight the current tab
+         currentIndex: _selectedIndex,
          selectedItemColor: Colors.deepOrange,
          unselectedItemColor: Colors.black87,
-         showUnselectedLabels: true, // Shows label for all items
-         onTap: _onItemTapped, // Call the method when a tab is tapped
+         showUnselectedLabels: true,
+         onTap: _onItemTapped,
        ),
     );
   }

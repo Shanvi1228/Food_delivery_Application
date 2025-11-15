@@ -57,7 +57,7 @@ class MyOrdersScreen extends StatelessWidget {
           Icon(
             Icons.article_outlined,
             size: 80,
-            color: Color(0xFFFFCC33),
+            color: Color(0xFFFFCC38),
           ),
           SizedBox(height: 20),
           Text(
